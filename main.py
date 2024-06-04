@@ -8,15 +8,15 @@ plt.show()
 
 
 
-def gradient_descent(m_now, b_now, points, L):
+def gradient_descent(m_now, b_now, data, L):
     m_gradient = 0
     b_gradient = 0
 
-    n = len(points)
+    n = len(data)
 
     for i in range(n):
-        x=points.iloc[i].studytime
-        y=points.iloc[i].score
+        x=data.iloc[i].studytime
+        y=data.iloc[i].score
 
         m_gradient += -(2/n) * x * (y- (m_now * x) - b_now)
         b_gradient += -(2 / n) * (y - (m_now * x) - b_now)
